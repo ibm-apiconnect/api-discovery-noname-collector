@@ -61,7 +61,7 @@ spec:
             - name: CLIENT_ID
               value: "{{ .Values.noname.client_id }}"
           volumeMounts:
-            - mountPath: /etc/velox/credentials/org
+            - mountPath: /etc/velox/credentials/client
               name: noname-client-secret
               readOnly: true
             - mountPath: /etc/velox/credentials/org
