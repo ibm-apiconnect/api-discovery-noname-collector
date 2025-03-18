@@ -7,7 +7,6 @@ noname:
   client_secret: 2f6e0341f1d354c3f4a37b7516174afc6064f54e4db42b62a0dbdb29e2d2c0469d2c82bcad5e0f516d9a709af2ac12a2a934d9bcbe4e492b42b0db641a2adeb5
 
 discovery:
-  # check with Denis
   datasource_name: ibmsec-data-source 
   platform_api_prefix: platform-api
   apic_host_domain: us-east-a.apiconnect.automation.ibm.com
