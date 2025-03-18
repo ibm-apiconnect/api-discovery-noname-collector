@@ -1,0 +1,31 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app.kubernetes.io/instance: management
+    app.kubernetes.io/managed-by: ibm-apiconnect
+    app.kubernetes.io/name: api-discovery-noname-collector
+  name: management-api-discovery-noname-collector
+  namespace: {{ .Values.discovery.namespace }}
+spec:
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - name: http-otlp
+    port: 5556
+    protocol: TCP
+    targetPort: 5556
+  - name: grpc-otlp
+    port: 5555
+    protocol: TCP
+    targetPort: 5555
+  selector:
+    app.kubernetes.io/instance: management
+    app.kubernetes.io/managed-by: ibm-apiconnect
+    app.kubernetes.io/name: api-discovery-noname-collector
+  sessionAffinity: None
+  type: ClusterIP
+

@@ -1,0 +1,22 @@
+---
+noname:
+  # Noname Deployment Domain from Security & Compliance settings
+  host_name: ibmapi.nonamesec.com
+  # Service account credentials
+  client_id: 023e717378ee21921cdee69c6db6410e25472329b2322cbb54a118c2d07b92b4
+  client_secret: 2f6e0341f1d354c3f4a37b7516174afc6064f54e4db42b62a0dbdb29e2d2c0469d2c82bcad5e0f516d9a709af2ac12a2a934d9bcbe4e492b42b0db641a2adeb5
+
+discovery:
+  # check with Denis
+  datasource_name: ibmsec-data-source 
+  platform_api_prefix: platform-api
+  apic_host_domain: us-east-a.apiconnect.automation.ibm.com
+  provider_org: myOrgName
+  api_key: xxxxxx
+  namespace: default
+
+logging:
+  log_level: debug
+
+images:
+  api_discovery_noname_collector: docker-na.artifactory.swg-devops.com/apic-dev-docker-local/nirai/api-discovery-noname-collector:latest
