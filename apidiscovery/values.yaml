@@ -18,4 +18,4 @@ logging:
   log_level: debug
 
 images:
-  api_discovery_noname_collector: docker-na.artifactory.swg-devops.com/apic-dev-docker-local/nirai/api-discovery-noname-collector:latest
+  api_discovery_noname_collector: ghcr.io/ibm-apiconnect/api-discovery-noname-collector:20250418-153357
