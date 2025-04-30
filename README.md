@@ -34,7 +34,8 @@ Output should be as follows which indicate that the required Kubernetes Resource
 
 ```
 helm template . | kubectl apply -f -
-secret/api-discovery-secret created
+secret/noname-client-secret created
+secret/noname-porg-secret created
 service/management-api-discovery-noname-collector created
 deployment.apps/management-api-discovery-noname-collector created
 ```
