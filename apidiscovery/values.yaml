@@ -16,8 +16,6 @@ discovery:
 
 logging:
   log_level: debug
-  # supported values are basic and detailed
-  debugexporter_verbosity: detailed
 
 images:
   api_discovery_noname_collector: ghcr.io/ibm-apiconnect/api-discovery-noname-collector:7-2025-04-16-18-39-15
