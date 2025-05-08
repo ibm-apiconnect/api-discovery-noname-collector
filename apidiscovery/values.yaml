@@ -1,7 +1,7 @@
 ---
 noname:
   # Noname Deployment Domain from Security & Compliance settings
-  host_name: <noname_domain>
+  host_name: noname_domain
   # Service account credentials
   client_id: xxxxxx
   client_secret: xxxxxx
