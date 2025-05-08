@@ -14,14 +14,14 @@ spec:
   - IPv4
   ipFamilyPolicy: SingleStack
   ports:
-  - name: http-otlp
+  - name: http-nnlp
+    port: 5557
+    protocol: TCP
+    targetPort: 5557
+  - name: grpc-nnlp
     port: 5556
     protocol: TCP
     targetPort: 5556
-  - name: grpc-otlp
-    port: 5555
-    protocol: TCP
-    targetPort: 5555
   selector:
     app.kubernetes.io/instance: management
     app.kubernetes.io/managed-by: ibm-apiconnect
