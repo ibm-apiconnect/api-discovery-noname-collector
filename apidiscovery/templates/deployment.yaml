@@ -50,8 +50,6 @@ spec:
           env:
             - name: PROVIDER_ORG
               value: "{{ .Values.discovery.provider_org }}"
-            - name: DISCOVERY_SERVER_BASE_URI
-              value: "https://{{ .Values.discovery.platform_api_prefix }}.{{ .Values.discovery.apic_host_domain }}"
             - name: DEBUG
               value: "noname-collector, noname-discovery-client"
             - name: LOG_LEVEL
