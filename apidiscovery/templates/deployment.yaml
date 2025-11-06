@@ -62,6 +62,8 @@ spec:
               value: "https://{{ .Values.noname.host_name }}"
             - name: CLIENT_ID
               value: "{{ .Values.noname.client_id }}"
+            - name: DISCOVERY_SERVER_BASE_URL
+              value: "https://{{ .Values.discovery.platform_api_prefix }}.{{ .Values.discovery.apic_host_domain }}"
           volumeMounts:
             - mountPath: /etc/velox/credentials/client
               name: noname-client-secret
