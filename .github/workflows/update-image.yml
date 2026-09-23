@@ -90,7 +90,7 @@ jobs:
             "/orgs/ibm-apiconnect/packages/container/api-discovery-noname-collector/versions" \
             --paginate \
             --jq '[.[] | {id: .id, tag: (.metadata.container.tags[0] // "")}]' \
-            | jq -s 'add | map(select(.tag | test("^[0-9]+-[0-9]{4}-"))) | map(. + {ts: (.tag | ltrimstr(split("-")[0]+"-"))}) | sort_by(.ts) | reverse | .[5:] | .[].id' \
+            | jq -s 'add | map(select(.tag | test("^[0-9]+-[0-9]{4}-"))) | map(. + {ts: (.tag | ltrimstr(split("-")[0]+"-"))}) | sort_by(.ts) | reverse | .[1:] | .[].id' \
             | while read -r version_id; do
                 echo "Deleting old version: $version_id"
                 gh api --method DELETE \
