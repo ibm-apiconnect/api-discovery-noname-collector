@@ -82,6 +82,7 @@ jobs:
 
       - name: Delete old image versions from GHCR
         if: steps.latest.outputs.latest != steps.current.outputs.current
+        continue-on-error: true
         env:
           GH_TOKEN: ${{ secrets.DELETE_PACKAGES_TOKEN }}
         run: |
